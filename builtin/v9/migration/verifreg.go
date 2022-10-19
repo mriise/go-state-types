@@ -87,7 +87,7 @@ func migrateVerifreg(ctx context.Context, adtStore adt8.Store, priorEpoch abi.Ch
 			Data:       proposal.PieceCID,
 			Size:       proposal.PieceSize,
 			TermMin:    proposal.Duration(),
-			TermMax:    market9.DealMaxDuration + market9.MarketDefaultAllocationTermBuffer,
+			TermMax:    market9.DealMaxDuration,
 			Expiration: expiration,
 		}); err != nil {
 			return xerrors.Errorf("failed to put new allocation obj: %w", err)
